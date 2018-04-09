@@ -10,9 +10,10 @@ CFLAGS              := $(filter-out -DCOAP_COMM_ENABLED,$(CFLAGS))
 endif
 
 ifneq (,$(filter -DMQTT_COMM_ENABLED,$(CFLAGS)))
-TARGET              += mqtt-example mqtt_rrpc-example
+TARGET              += mqtt-example mqtt_rrpc-example lg-example
 SRCS_mqtt-example   := mqtt/mqtt-example.c
 SRCS_mqtt_rrpc-example := mqtt/mqtt_rrpc-example.c
+SRCS_lg-example     := mqtt/lg-example.c
 
     ifneq (,$(filter -DOTA_ENABLED,$(CFLAGS)))
     ifneq (,$(filter -DOTA_SIGNAL_CHANNEL=1,$(CFLAGS)))
